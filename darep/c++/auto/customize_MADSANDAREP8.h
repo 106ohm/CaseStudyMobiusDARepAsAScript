@@ -1,0 +1,14 @@
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).T()->Init({TDRSVDAREP8});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).H()->Init({HDRSVDAREP8});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).DPmemory()->Init({DPmemoryDRSVDAREP8});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).THRESHOLDmemory()->Init({THRESHOLDmemoryDRSVDAREP8});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).DPage()->Init({DPageDRSVDAREP8});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).NW()->Init({NWDRSVDAREP8, NWDRSVDAREP9});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::MAD::rep(8).TimerStatus()->Init({TimerStatusDRSVDAREP8, TimerStatusDRSVDAREP9});

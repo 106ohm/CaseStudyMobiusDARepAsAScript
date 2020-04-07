@@ -1,0 +1,6 @@
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::OLTC_SAN::rep(0).OLTCStatus()->Init({OLTCStatusDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::OLTC_SAN::rep(0).OLTC_T()->Init({OLTC_TDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::OLTC_SAN::rep(0).BranchStatus()->Init({BranchStatusDRSVDAREP0});

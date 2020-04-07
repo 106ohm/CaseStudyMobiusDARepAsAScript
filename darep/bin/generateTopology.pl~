@@ -1,0 +1,44 @@
+
+
+# load templates
+#######################
+
+# templates files init
+my $tx = Text::Xslate->new(
+    path => $DAREP,
+    cache_dir => "$ENV{HOME}/.xslate_cache",
+    cache => 1,
+    syntax => 'Text::Xslate::Syntax::Kolon',
+    type => 'text'
+    );
+
+# load into a string the template file xml
+$tx->load_file($TXML);
+# variables for the c++ template
+my %vars_xml = (
+    nbus => $nbus,
+    nbranch => $nbranch,
+    branchbusindex => \@BranchBusIndex,
+    branchdepsbusindex => \@BranchDepsBusIndex,
+    noltc => $nOLTC,
+    oltcbranchindex => \@OLTCBranchIndex,
+    branchdepsoltcindex => \%BranchDepsOLTCIndex,
+    ndg => $nDG,
+    dgbusindex => \@DGBusIndex,
+    busdepsdgindex => \%BusDepsDGIndex,
+    nhg => $nHG,
+    hgbusindex => \@HGBusIndex,
+    busdepshgindex => \%BusDepsHGIndex,
+    nfl => $nFL,
+    flbusindex => \@FLBusIndex,
+    busdepsflindex => \%BusDepsFLIndex,
+    ncb => $nCB,
+    cbbusindex => \@CBBusIndex,
+    busdepscbindex => \%BusDepsCBIndex,
+    nagc => $nAGC
+);
+
+# gen xml file
+write_file($XMLDESTFILE, $tx->render($TXML, \%vars_xml));
+
+say "*** Generated xml files:";

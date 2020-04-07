@@ -1,0 +1,38 @@
+: constant n = $n;
+: constant neighbors = $neighbors;
+<darepinput>
+<darepcomposedname>Comp</darepcomposedname> <!-- name of the composed model -->
+<darepnodename>Comp</darepnodename> <!-- name of the join node -->
+ <SANDAREPS> <!-- list of template SAN -->
+   <SANDAREP> 
+     <name>Template</name>
+     <replicasNumber><: n :></replicasNumber> <!-- number of SAN replicas: number of buses -->
+     <topology>
+       <replicasNumber><: n :></replicasNumber> <!-- number of replicas of the DRSV listed below -->
+       <drsvs>
+	 <drsv>
+           <name>NF</name>
+           <type>Place</type> <!-- type* name -->
+         </drsv>
+       </drsvs>
+       : for neighbors -> $row {
+       <deps> <!-- define neighbors of node <: $~row :> -->
+   	 <ind><: $~row :></ind>
+         : for $row -> $column { 
+         <dep>
+	   <pos><: $~column :></pos>
+	   <ind><: $column :></ind>
+	 </dep>
+         : } # end loop over columns
+       </deps>
+       : } # end loop over rows       
+     </topology> 
+   </SANDAREP> <!-- Template SAN -->
+ </SANDAREPS> <!-- list of template SAN -->
+ <sharedAllSAN> <!-- state variables (non drsv) shared among all SAN -->
+ </sharedAllSAN>
+ <sharedSAN>
+   <shared>
+   </shared>
+ </sharedSAN>
+</darepinput>

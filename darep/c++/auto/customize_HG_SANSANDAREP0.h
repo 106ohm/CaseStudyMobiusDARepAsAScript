@@ -1,0 +1,12 @@
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).HG_PMax()->Init({HG_PMaxDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).HG_PMin()->Init({HG_PMinDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).HG_QMax()->Init({HG_QMaxDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).HG_QMin()->Init({HG_QMinDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).HGStatus()->Init({HGStatusDRSVDAREP0});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::HG_SAN::rep(0).BusStatus()->Init({BusStatusDRSVDAREP0});

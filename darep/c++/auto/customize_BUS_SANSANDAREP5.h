@@ -1,0 +1,18 @@
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).P()->Init({PDRSVDAREP5});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).Q()->Init({QDRSVDAREP5});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).V()->Init({VDRSVDAREP5});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).Delta()->Init({DeltaDRSVDAREP5});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).BusStatus()->Init({BusStatusDRSVDAREP5});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).BranchStatus()->Init({BranchStatusDRSVDAREP6, BranchStatusDRSVDAREP8, BranchStatusDRSVDAREP10});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).DGStatus()->Init({DGStatusDRSVDAREP2});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).FLStatus()->Init({FLStatusDRSVDAREP2});
+ // example: mySANSANDAREP(0).mySSVDAREP()->Init({mySSVDAREP0,mySSVDAREP1});
+ SANDAREP::BUS_SAN::rep(5).CBStatus()->Init({CBStatusDRSVDAREP1});

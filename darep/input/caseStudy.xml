@@ -1,0 +1,47 @@
+<darepinput>
+<darepcomposedname>Comp</darepcomposedname> <!-- name of the composed model -->
+<darepnodename>Comp</darepnodename> <!-- name of the join node -->
+ <SANDAREPS> <!-- list of template SAN -->
+   <SANDAREP> 
+     <name>Template</name>
+     <replicasNumber>2</replicasNumber> <!-- number of SAN replicas: number of buses -->
+     <topology>
+       <replicasNumber>2</replicasNumber> <!-- number of replicas of the DRSV listed below -->
+       <drsvs>
+	 <drsv>
+           <name>NF</name>
+           <type>Place</type> <!-- type* name -->
+         </drsv>
+       </drsvs>
+       <deps> <!-- define neighbors of node 0 -->
+   	 <ind>0</ind>
+         <dep>
+	   <pos>0</pos>
+	   <ind>0</ind>
+	 </dep>
+         <dep>
+	   <pos>1</pos>
+	   <ind>1</ind>
+	 </dep>
+       </deps>
+       <deps> <!-- define neighbors of node 1 -->
+   	 <ind>1</ind>
+         <dep>
+	   <pos>0</pos>
+	   <ind>1</ind>
+	 </dep>
+         <dep>
+	   <pos>1</pos>
+	   <ind>0</ind>
+	 </dep>
+       </deps>
+     </topology> 
+   </SANDAREP> <!-- Template SAN -->
+ </SANDAREPS> <!-- list of template SAN -->
+ <sharedAllSAN> <!-- state variables (non drsv) shared among all SAN -->
+ </sharedAllSAN>
+ <sharedSAN>
+   <shared>
+   </shared>
+ </sharedSAN>
+</darepinput>

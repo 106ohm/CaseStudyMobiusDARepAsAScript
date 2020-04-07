@@ -1,0 +1,21 @@
+: constant n = $n;
+: constant neighbors = $neighbors;
+<?xml version="1.0"?>
+<!-- macros -->
+<stateVariableTopology xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <name>Template</name>
+  <numberOfDependencyAwareSVs>1</numberOfDependencyAwareSVs>
+  <numberOfReplicas><: n :></numberOfReplicas>
+  <topology>
+    <dependencyAwareSVs>
+      <dependencyAwareSV type="Place">NF</dependencyAwareSV>
+    </dependencyAwareSVs>
+    : for neighbors -> $row {
+       <dependencies replicaNumber="<: $~row :>">
+         : for $row -> $column {
+	   <dependency pos="<: $~column :>"><: $column :></dependency>
+         : } # end loop over columns
+       </dependencies>
+    : } # end loop over rows
+  </topology>
+</stateVariableTopology>
